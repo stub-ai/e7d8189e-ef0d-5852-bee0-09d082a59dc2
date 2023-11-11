@@ -54,22 +54,22 @@ const Calculator = () => {
       </div>
       <div className="grid grid-cols-4 gap-2 mb-4">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((number) => (
-          <button key={number} onClick={() => handleNumberClick(number.toString())} className="border p-2 rounded">
+          <button key={number} onClick={() => handleNumberClick(number.toString())} className="border p-2 rounded bg-blue-500 text-white">
             {number}
           </button>
         ))}
       </div>
       <div className="grid grid-cols-4 gap-2 mb-4">
         {["+", "-", "*", "/"].map((operator) => (
-          <button key={operator} onClick={() => handleOperatorClick(operator)} className="border p-2 rounded">
+          <button key={operator} onClick={() => handleOperatorClick(operator)} className="border p-2 rounded bg-blue-500 text-white">
             {operator}
           </button>
         ))}
       </div>
-      <button onClick={calculate} className="border p-2 rounded mb-4 w-full">
+      <button onClick={calculate} className="border p-2 rounded mb-4 w-full bg-green-500 text-white">
         Calculate
       </button>
-      <button onClick={clear} className="border p-2 rounded w-full">
+      <button onClick={clear} className="border p-2 rounded w-full bg-red-500 text-white">
         Clear
       </button>
       {result && (
